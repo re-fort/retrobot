@@ -24,8 +24,12 @@ class Retrobot
     )
 
     DEFAULTS = {
+      consumer_key: ENV['CONSUMER_KEY'],
+      consumer_secret: ENV['CONSUMER_SECRET'],
+      access_token: ENV['ACCESS_TOKEN'],
+      access_secret: ENV['ACCESS_SECRET'],
+      retro_days: ENV['RETRO_DAYS'],
       tweets_csv: './tweets/tweets.csv',
-      retro_days: 365,
       retweet: false,
       debug: false,
       dryrun: false,
@@ -34,7 +38,7 @@ class Retrobot
       retry_count: 5,
       add_in_reply_to_url: false,
       suppress_pattern: nil,
-      remove_hashtag: false,
+      remove_hashtag: true,
       dying_mention_to: nil,
     }
 
@@ -67,10 +71,6 @@ class Retrobot
       # add mention mark (atmark)
       @options[:dying_mention_to].start_with?('@') ?
         @options[:dying_mention_to] : "@" + @options[:dying_mention_to]
-    end
-
-    def load_yaml_file!(path)
-      @options.merge! Psych.load_file(path.to_s).symbolize_keys
     end
   end
 end

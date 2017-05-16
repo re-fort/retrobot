@@ -1,8 +1,5 @@
-tweets/
 *.env
 log/
 tmp/
 pkg/
 .bundle
-retrobot.yml
-Gemfile.lock

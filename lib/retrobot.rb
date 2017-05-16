@@ -134,12 +134,6 @@ class Retrobot
     options = parse_options()
     @config = Config.new
 
-    config_yml = file_from_candidates(
-      options[:config], './retrobot.yml',
-      GEM_ROOT.join('retrobot.yml')
-    )
-    @config.load_yaml_file!(config_yml) if config_yml
-
     @config.merge!(options)
 
     client.current_user # for faster fail (e.g. wrong credentials given)

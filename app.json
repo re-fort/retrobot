@@ -1,0 +1,30 @@
+{
+    "name": "retrobot",
+    "description": "twitter-bot engine",
+    "website": "https://github.com/re-fort/retrobot",
+    "repository": "https://github.com/re-fort/retrobot",
+    "success_url": "/",
+    "env": {
+        "CONSUMER_KEY": {
+            "description": "Twitter Consumer Key",
+            "required": true
+        },
+        "CONSUMER_SECRET": {
+            "description": "Twitter Consumer Secret",
+            "required": true
+        },
+        "ACCESS_TOKEN": {
+            "description": "Twitter Access Token Key",
+            "required": true
+        },
+        "ACCESS_SECRET": {
+            "description": "Twitter Access Secret",
+            "required": true
+        },
+        "RETRO_DAYS": {
+            "description": "How days long ago do you want to see?",
+            "required": true,
+            "value": "365"
+        }
+    }
+}
