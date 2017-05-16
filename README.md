@@ -8,3 +8,4 @@ It is customized to work on Heroku.
 1. [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 1. Fill `Config Vars` at repo's setting on Heroku
 1. Upload your `tweets.csv`(commit or other way)
+1. Turn on `worker` at repo's resources on Heroku
