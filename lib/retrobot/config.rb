@@ -29,6 +29,7 @@ class Retrobot
       access_token: ENV['ACCESS_TOKEN'],
       access_secret: ENV['ACCESS_SECRET'],
       retro_days: ENV['RETRO_DAYS'],
+      dying_mention_to: ENV['DYING_MENTION_TO'],
       tweets_csv: './tweets/tweets.csv',
       retweet: false,
       debug: false,
@@ -39,7 +40,6 @@ class Retrobot
       add_in_reply_to_url: false,
       suppress_pattern: nil,
       remove_hashtag: true,
-      dying_mention_to: nil,
     }
 
     def initialize(options={})

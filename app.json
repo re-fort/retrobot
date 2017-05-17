@@ -25,6 +25,11 @@
             "description": "How days long ago do you want to see?",
             "required": true,
             "value": "365"
+        },
+        "DYING_MENTION_TO": {
+            "description": "Send dying message as mention to this person if tweets.csv doesn't have tweets anymore",
+            "required": true,
+            "value": "@re_fort"
         }
     }
 }
